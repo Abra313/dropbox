@@ -1,3 +1,4 @@
+require('dotenv').config(); // Load environment variables from .env file
 const mongoose = require('mongoose');
 
 // Define the Token schema
@@ -10,7 +11,7 @@ const tokenSchema = new mongoose.Schema({
 const Token = mongoose.model('Token', tokenSchema);
 
 // MongoDB connection URL
-const MONGO_URI = 'mongodb+srv://taiwopeter454:sqw8ekNOJNCY3phr@dropbox.6abio.mongodb.net/?retryWrites=true&w=majority&appName=dropbox'; // Change this to your MongoDB URI
+const MONGO_URI = process.env.MONGO_URI; // Use MONGO_URI from .env file
 
 // Function to store the token in the database
 const storeToken = async (tokenData) => {
