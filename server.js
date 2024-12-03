@@ -13,6 +13,7 @@ app.use(cors);
 // Connect to MongoDB
 connectDB();
 
+
 // Routes
 app.use('/api/files', fileRoutes);
 
@@ -21,7 +22,7 @@ app.use((err, req, res, next) => {
   // Log error details for debugging (including the stack trace)
   console.error(`Error occurred: ${err.message}`);
   console.error(err.stack);
-  
+
   // Determine status code
   const statusCode = err.statusCode || 500;
 
