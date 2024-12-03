@@ -33,9 +33,9 @@ const storeToken = async (tokenData) => {
   }
 };
 
-// Example token data (replace this with actual data)
+// Use the ACCESS_TOKEN from the .env file
 const tokenData = {
-  access_token: "sl.CB6FcPA46kucMASahgtC7KomQAv5pJDOY5FDboNbiJDGF8z_PbKinKIdWItkTGEC6v_CoyHqxLrYOKHhRwx_koq1MRZJ83AeyMHMzuPiV9tSj4Fv2OQU2yMqca3PjBu6aOHZPRzhrKoyk_aDCpxD",
+  access_token: process.env.ACCESS_TOKEN, // Use ACCESS_TOKEN from .env
   token_type: "bearer",
   expires_in: 14400, // expires in 14400 seconds (4 hours)
 };
